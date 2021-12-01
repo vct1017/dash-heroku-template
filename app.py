@@ -166,14 +166,6 @@ app.layout = html.Div(
         dcc.Graph(figure=gss_plot)
     ]
         
-@app.callback(Output(component_id="graph",component_property="figure"), 
-                  [Input(component_id='x-axis',component_property="value"),
-                   Input(component_id='y-axis',component_property="value"),
-                   Input(component_id='color',component_property="value")])
-
-
 )
-
-
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8052)
+    app.run_server(debug=True, port=8052, host='0.0.0.0')
